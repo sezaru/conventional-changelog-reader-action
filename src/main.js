@@ -19,8 +19,9 @@ exports.main = async function main() {
       );
     }
 
-    core.startGroup("Parse data");
+    core.startGroup("Parse data bla");
     const rawData = await readFile(changelogPath);
+    core.startGroup(`${rawData}`);
     const versions = getEntries(rawData).map(parseEntry);
     core.debug(`${versions.length} version logs found`);
     core.endGroup();
