@@ -4622,7 +4622,7 @@ const core = __nccwpck_require__(2186);
 const { semver, date } = __nccwpck_require__(3628);
 
 const headerRegex = new RegExp(
-  `###?( | \\[)(${semver.source})( |\\]\\(.+\\) )\\(${date.source}\\)`,
+  `###?( | \\[.*?)(${semver.source})( |\\]\\(.+\\) )\\(${date.source}\\)`,
   "g"
 );
 

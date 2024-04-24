@@ -2,7 +2,7 @@ const core = require("@actions/core");
 const { semver, date } = require("./regexps");
 
 const headerRegex = new RegExp(
-  `###?( | \\[)(${semver.source})( |\\]\\(.+\\) )\\(${date.source}\\)`,
+  `###?( | \\[.*?)(${semver.source})( |\\]\\(.+\\) )\\(${date.source}\\)`,
   "g"
 );
 
