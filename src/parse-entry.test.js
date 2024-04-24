@@ -23,7 +23,7 @@ const entryDescription = `
 
 test("get readable data from text entry", () => {
   const input = `
-    ### [3.0.0](https://github.com/conventional-changelog/conventional-changelog/compare/conventional-changelog@2.0.3...conventional-changelog@3.0.0) (2018-11-01)
+    ### [v3.0.0](https://github.com/conventional-changelog/conventional-changelog/compare/conventional-changelog@2.0.3...conventional-changelog@3.0.0) (2018-11-01)
     ${entryDescription}
   `;
   const output = parseEntry(input);
@@ -39,7 +39,7 @@ test("get readable data from text entry", () => {
 
 test("get readable data from text entry with heading level 2", () => {
   const input = `
-    ## [3.0.0](https://github.com/conventional-changelog/conventional-changelog/compare/conventional-changelog@2.0.3...conventional-changelog@3.0.0) (2018-11-01)
+    ## [v3.0.0](https://github.com/conventional-changelog/conventional-changelog/compare/conventional-changelog@2.0.3...conventional-changelog@3.0.0) (2018-11-01)
     ${entryDescription}
   `;
   const output = parseEntry(input);
@@ -55,7 +55,7 @@ test("get readable data from text entry with heading level 2", () => {
 
 test("get readable data from text entry with prereleased version", () => {
   const input = `
-    ## [3.0.0-0](https://github.com/conventional-changelog/conventional-changelog/compare/conventional-changelog@2.0.3...conventional-changelog@3.0.0) (2018-11-01)
+    ## [v3.0.0-0](https://github.com/conventional-changelog/conventional-changelog/compare/conventional-changelog@2.0.3...conventional-changelog@3.0.0) (2018-11-01)
     ${entryDescription}
   `;
   const output = parseEntry(input);
@@ -71,7 +71,7 @@ test("get readable data from text entry with prereleased version", () => {
 
 test("get readable data from text entry without compare url", () => {
   const input = `
-    ## 3.0.0 (2018-11-01)
+    ## v3.0.0 (2018-11-01)
     ${entryDescription}
   `;
   const output = parseEntry(input);
